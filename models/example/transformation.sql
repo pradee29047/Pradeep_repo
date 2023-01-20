@@ -11,3 +11,4 @@ left join SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.orders
 on CUSTOMER.C_CUSTKEY = orders.O_CUSTKEY
 
 
+
