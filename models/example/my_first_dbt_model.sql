@@ -13,7 +13,7 @@ with source_data as (
 
     select 1 as id
     union all
-    select 0 as id
+    select 3 as id
 
 )
 
