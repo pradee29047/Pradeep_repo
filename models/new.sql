@@ -1,4 +1,4 @@
-{{ config(materialized='table',transient=true)}}
+{{ config(materialized='table',transient=true) }}
 
 select *
 from SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS
