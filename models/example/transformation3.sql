@@ -9,11 +9,6 @@ as CUSTOMER
 left join SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.orders
 on CUSTOMER.C_CUSTKEY = orders.O_CUSTKEY)
 
-select *,SUBSTRING(C_NAME,  LEN(C_NAME)-8) as C_NAMES
+select *,
+REGEXP_REPLACE(C_NAME,'[^0-9]','') as C_NAMES
 from source_data
-
-
-
-
-
-
