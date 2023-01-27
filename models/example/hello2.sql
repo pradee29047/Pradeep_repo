@@ -1,6 +1,9 @@
 {{ config(materialized='table',transient=true)}}
 
+with orders as(
 select *
-from 
-SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.ORDERS
-where O_TOTALPRICE>9000
+
+from {{ source('jaffle_shop', 'orders') }}
+)
+select * from orders
+where O_ORDERSTATUS in ('F')
